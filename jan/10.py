@@ -4,3 +4,13 @@
 
 # Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.
 
+from time import sleep
+
+def f():
+    print('scheduled job completed') 
+
+def scheduler(f, n):
+    sleep(n/1000)
+    return f()
+
+print(scheduler(f, 1000))
